@@ -26,7 +26,11 @@ const ContactInfo = () => {
   };
 
   return (
-    <div className="fixed w-2/5 md:left-8/10 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300 ">
+    <div
+      className="fixed w-2/5 md:left-9/10 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
+      onMouseEnter={() => setIsPopoverOpen(true)}
+      onMouseLeave={() => setIsPopoverOpen(false)}
+    >
       <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
         <PopoverTrigger asChild>
           <button className="group gap-4 text-md font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-6 py-3 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
