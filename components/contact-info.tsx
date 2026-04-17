@@ -44,7 +44,7 @@ const ContactInfo = () => {
     >
       <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
         <PopoverTrigger asChild>
-          <button className="group gap-4 text-xs font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-6 py-3 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
+          <button className="group gap-4 text-xs font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-4 py-1 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
             <span>Contact Me!</span>
             <MessageCircle className="shrink-0 size-3" />
           </button>

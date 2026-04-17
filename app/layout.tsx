@@ -37,9 +37,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex flex-col min-h-dvh">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -52,7 +52,7 @@ export default function RootLayout({
                 Hazim B.
               </span>
               <div className="hidden md:flex items-center gap-4">
-                <div className="text-center h-full flex items-center">
+                <div className="text-center flex items-center">
                   <PortfolioTabs />
                 </div>
               </div>
