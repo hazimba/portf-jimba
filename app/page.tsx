@@ -1,66 +1,86 @@
 import { ModeToggle } from "@/components/mode-toggle";
-import Image from "next/image";
+import { PortfolioTabs } from "./PortfTabs";
+import FadeIn from "@/components/fade-in";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <ModeToggle />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container max-w-7xl mx-auto flex h-16 items-center justify-between px-4">
+          <span className="text-xl font-bold tracking-tight">Hazim Bakar</span>
+          <ModeToggle />
+        </div>
+      </header>
+
+      <main className="container max-w-7xl mx-auto px-4 py-20">
+        <section className="text-center mb-20">
+          <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium mb-6 bg-muted/40">
+            3+ Years of Full-Stack Development Experience
+          </div>
+
+          <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl mb-6 leading-tight">
+            Full-Stack Developer
+            <span className="block text-muted-foreground font-semibold">
+              Crafting Modern, Scalable & User-Friendly Digital Products
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-8 mb-10">
+            I build fast, responsive web applications with a strong focus on
+            clean UI, performance, and business-driven solutions. With 3 years
+            of experience in full-stack development, I work across frontend,
+            backend, databases, and reporting systems to deliver products that
+            are both functional and visually polished.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+          <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
+            <div className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium border border-blue-200">
+              React
+            </div>
+            <div className="px-4 py-2 rounded-full bg-cyan-100 text-cyan-700 text-sm font-medium border border-cyan-200">
+              TypeScript
+            </div>
+            <div className="px-4 py-2 rounded-full bg-sky-100 text-sky-700 text-sm font-medium border border-sky-200">
+              Tailwind CSS
+            </div>
+            <div className="px-4 py-2 rounded-full bg-red-100 text-red-700 text-sm font-medium border border-red-200">
+              Firebase
+            </div>
+            <div className="px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium border border-emerald-200">
+              Supabase
+            </div>
+            <div className="px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium border border-green-200">
+              Node.js
+            </div>
+            <div className="px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium border border-purple-200">
+              MongoDB
+            </div>
+            <div className="px-4 py-2 rounded-full bg-pink-100 text-pink-700 text-sm font-medium border border-pink-200">
+              Ant Design
+            </div>
+            <div className="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 text-sm font-medium border border-yellow-200">
+              UI / UX Design
+            </div>
+            <div className="px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium border border-orange-200">
+              Customer Relations
+            </div>
+            <div className="px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium border border-indigo-200">
+              Metabase Reports
+            </div>
+            <div className="px-4 py-2 rounded-full bg-slate-100 text-slate-700 text-sm font-medium border border-slate-200">
+              REST APIs
+            </div>
+          </div>
+        </section>
+
+        <FadeIn>
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-4xl">
+              <PortfolioTabs />
+            </div>
+          </div>
+        </FadeIn>
       </main>
     </div>
   );
