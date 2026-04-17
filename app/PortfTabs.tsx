@@ -17,7 +17,6 @@ export function PortfolioTabs() {
     <Tabs value={pathname} className="w-full">
       <div className="flex justify-center items-center">
         <TabsList>
-          {/* Always Visible */}
           <TabsTrigger value="/">
             <Link href="/">Home</Link>
           </TabsTrigger>
@@ -26,7 +25,6 @@ export function PortfolioTabs() {
             <Link href="/project">Projects</Link>
           </TabsTrigger>
 
-          {/* Desktop Only: Individual Tabs */}
           <div className="hidden md:flex">
             <TabsTrigger value="/experience">
               <Link href="/experience">Experience</Link>
@@ -34,12 +32,8 @@ export function PortfolioTabs() {
             <TabsTrigger value="/education">
               <Link href="/education">Education</Link>
             </TabsTrigger>
-            <TabsTrigger value="/contact">
-              <Link href="/contact">Contact</Link>
-            </TabsTrigger>
           </div>
 
-          {/* Mobile Only: "More" Dropdown */}
           <div className="md:hidden">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -53,9 +47,6 @@ export function PortfolioTabs() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/education">Education</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/contact">Contact</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

@@ -55,7 +55,7 @@ const Home = async () => {
         "bg-pink-100 text-pink-700 border-pink-200 dark:bg-pink-500/10 dark:text-pink-300 dark:border-pink-500/20",
     },
     {
-      name: "etc...",
+      name: "etc..",
       className:
         "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-500/10 dark:text-gray-300 dark:border-gray-500/20",
     },
@@ -78,7 +78,10 @@ const Home = async () => {
               </span>
             </h1>
 
-            <p className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 md:mt-20 mt-12">
+            <p
+              className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 md:mt-20 mt-4 tracking-tight
+leading-relaxed"
+            >
               I create modern websites that help businesses build trust, attract
               more customers, and strengthen their brand. By focusing on speed,
               user experience, and visibility, I help businesses stand out and
@@ -90,7 +93,7 @@ const Home = async () => {
                 <Badge
                   key={tech.name}
                   variant="outline"
-                  className={`px-3 py-3 text-xs font-semibold uppercase tracking-wider rounded-md ${tech.className}`}
+                  className={`px-3 py-3 text-[8px] md:text-base font-semibold uppercase tracking-wider rounded-md ${tech.className}`}
                 >
                   {tech.name}
                 </Badge>

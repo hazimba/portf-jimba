@@ -26,19 +26,19 @@ const ProjectsPage = async () => {
       website: "https://tmtourtravel-frontoffice.vercel.app/",
       github: "https://github.com/hazimba/tmtourtravel-frontoffice",
     },
-    {
-      title: "XYZ Sdn Bhd",
-      techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
-      description:
-        "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
-      keyFeatures: [
-        "New Website with modern design",
-        "Mobile responsive and optimized for performance",
-      ],
-      image: "/swift-lorry.jpg",
-      website: "https://tmtourtravel-frontoffice.vercel.app/",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
-    },
+    // {
+    //   title: "XYZ Sdn Bhd",
+    //   techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
+    //   description:
+    //     "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
+    //   keyFeatures: [
+    //     "New Website with modern design",
+    //     "Mobile responsive and optimized for performance",
+    //   ],
+    //   image: "/swift-lorry.jpg",
+    //   website: "https://tmtourtravel-frontoffice.vercel.app/",
+    //   github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+    // },
   ];
 
   return (
@@ -94,12 +94,6 @@ const ProjectsPage = async () => {
                     <CardTitle className="text-2xl font-bold tracking-tight">
                       {proj.title}
                     </CardTitle>
-                    <Badge
-                      variant="outline"
-                      className="cursor-pointer py-2 px-3"
-                    >
-                      Code <ArrowRight className="w-3 h-3 ml-1" />
-                    </Badge>
                   </div>
                   {/* <div className="flex flex-wrap gap-2">
                     {proj.techStack.map((tech) => (
@@ -173,6 +167,32 @@ const ProjectsPage = async () => {
                         </li>
                       ))}
                     </ul>
+                    <div className="mt-8 flex justify-end gap-4">
+                      <Link
+                        href={proj.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Badge
+                          variant="outline"
+                          className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
+                        >
+                          Github <ArrowRight className="w-3 h-3 ml-1" />
+                        </Badge>
+                      </Link>
+                      <Link
+                        href={proj.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Badge
+                          variant="outline"
+                          className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
+                        >
+                          Website <ArrowRight className="w-3 h-3 ml-1" />
+                        </Badge>
+                      </Link>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
