@@ -9,23 +9,12 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export function PortfolioTabs() {
   const pathname = usePathname();
-  const [activeTab, setActiveTab] = useState(pathname);
-
-  useEffect(() => {
-    setActiveTab(pathname);
-  }, [pathname]);
-
-  // Helper to check if the active path is hidden inside the "More" menu
-  const isMoreActive = ["/experience", "/education", "/contact"].includes(
-    pathname
-  );
 
   return (
-    <Tabs value={activeTab} className="w-full">
+    <Tabs value={pathname} className="w-full">
       <div className="flex justify-center items-center">
         <TabsList>
           {/* Always Visible */}
