@@ -58,7 +58,7 @@ export function PortfolioTabs() {
                   More <ChevronDown className="h-4 w-4" />
                 </TabsTrigger>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="space-y-2">
                 <DropdownMenuItem asChild>
                   <Link href="/experience">Experience</Link>
                 </DropdownMenuItem>

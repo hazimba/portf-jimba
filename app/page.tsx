@@ -39,25 +39,25 @@ const Home = async () => {
       className:
         "bg-lime-100 text-lime-700 border-lime-200 dark:bg-lime-500/10 dark:text-lime-300 dark:border-lime-500/20",
     },
-    {
-      name: "Cloudflare",
-      className:
-        "bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-500/10 dark:text-orange-300 dark:border-orange-500/20",
-    },
-    {
-      name: "Git",
-      className:
-        "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-500/10 dark:text-gray-300 dark:border-gray-500/20",
-    },
-    {
-      name: "Firebase",
-      className:
-        "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-500/10 dark:text-yellow-300 dark:border-yellow-500/20",
-    },
+    // {
+    //   name: "Cloudflare",
+    //   className:
+    //     "bg-orange-100 text-orange-700 border-orange-200 dark:bg-orange-500/10 dark:text-orange-300 dark:border-orange-500/20",
+    // },
+    // {
+    //   name: "Firebase",
+    //   className:
+    //     "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-500/10 dark:text-yellow-300 dark:border-yellow-500/20",
+    // },
     {
       name: "Customer Support",
       className:
         "bg-pink-100 text-pink-700 border-pink-200 dark:bg-pink-500/10 dark:text-pink-300 dark:border-pink-500/20",
+    },
+    {
+      name: "etc...",
+      className:
+        "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-500/10 dark:text-gray-300 dark:border-gray-500/20",
     },
   ];
 
@@ -71,17 +71,18 @@ const Home = async () => {
               🚀 3+ Years of Full-Stack Expertise
             </div>
 
-            <h1 className="md:text-5xl text-3xl md:text-7xl font-bold tracking-tight mb-6">
+            <h1 className="md:text-5xl text-2xl md:text-7xl font-bold tracking-tight mb-6">
               Full-Stack <span className="text-primary">Developer</span>
-              <span className="block text-xl md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
+              <span className="block text-lg md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
                 Crafting Modern, Scalable & User-Friendly Digital Products
               </span>
             </h1>
 
-            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 md:mt-20 mt-12">
-              I build fast, responsive web applications with a focus on clean UI
-              and performance. Bridging the gap between complex backend logic
-              and polished frontend design.
+            <p className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 md:mt-20 mt-12">
+              I create modern websites that help businesses build trust, attract
+              more customers, and strengthen their brand. By focusing on speed,
+              user experience, and visibility, I help businesses stand out and
+              make a better impression.
             </p>
 
             <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto opacity-90">

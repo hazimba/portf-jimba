@@ -50,7 +50,7 @@ export default function RootLayout({
           <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container max-w-7xl mx-auto flex h-16 items-center justify-between px-4">
               <span className="md:text-xl  font-bold tracking-tight">
-                Hazim B.
+                Hazim Bakar
               </span>
               <div className="hidden md:flex items-center gap-4">
                 <div className="text-center h-full flex items-center">
