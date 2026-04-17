@@ -40,6 +40,7 @@ const ParticlesBackground = () => {
                 direction: "none",
                 outModes: { default: "out" },
               },
+              // @ts-expect-error: The library's types are not fully accurate, but the options are correct according to the documentation
               number: { density: { enable: true, area: 800 }, value: 80 },
               opacity: { value: 0.5 },
               shape: { type: "circle" },
