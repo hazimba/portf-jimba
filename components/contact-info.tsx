@@ -29,7 +29,9 @@ const ContactInfo = () => {
 
   return (
     <div
-      className="fixed w-4/5 md:left-8/7 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
+      className={`fixed w-4/5 md:left-8/7 left-19/18 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300 ${
+        isPopoverOpen ? "opacity-100" : "opacity-30 hover:opacity-100"
+      }`}
       onMouseEnter={() => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
         setIsPopoverOpen(true);
