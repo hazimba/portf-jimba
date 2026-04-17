@@ -53,7 +53,7 @@ const ProjectsPage = async () => {
               </h1>
               <AnimationBg />
             </div>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-base max-w-5xl mx-auto">
               Innovative solutions built with a focus on performance,
               scalability, and user experience.
             </p>

@@ -12,11 +12,13 @@ import {
   MessageCircle,
   ExternalLink,
 } from "lucide-react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 
 const ContactInfo = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const contactDetails = {
     phone: "+601140432883",
@@ -27,23 +29,30 @@ const ContactInfo = () => {
 
   return (
     <div
-      className="fixed w-3/5 md:left-9/10 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
-      onMouseEnter={() => setIsPopoverOpen(true)}
-      onMouseLeave={() => setIsPopoverOpen(false)}
+      className="fixed w-4/5 md:left-8/7 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
+      onMouseEnter={() => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        setIsPopoverOpen(true);
+      }}
+      onMouseLeave={() => {
+        timeoutRef.current = setTimeout(() => {
+          setIsPopoverOpen(false);
+        }, 150);
+      }}
     >
       <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
         <PopoverTrigger asChild>
-          <button className="group gap-4 text-md font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-6 py-3 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
+          <button className="group gap-4 text-xs font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-6 py-3 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
             <span>Contact Me!</span>
-            <MessageCircle className="shrink-0 size-5" />
+            <MessageCircle className="shrink-0 size-3" />
           </button>
         </PopoverTrigger>
 
         <PopoverContent
           side="top"
-          align="start"
-          sideOffset={15}
-          className="w-70 p-0 shadow-2xl mr-4 border-primary/20 overflow-hidden"
+          align="end"
+          sideOffset={10}
+          className="w-70 p-0 shadow-2xl border-primary/20 overflow-hidden"
         >
           <div className="bg-primary p-4 text-primary-foreground">
             <h3 className="font-bold text-lg">Let&apos;s Connect</h3>
