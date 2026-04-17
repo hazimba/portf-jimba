@@ -50,38 +50,30 @@ const Home = async () => {
     //     "bg-yellow-100 text-yellow-700 border-yellow-200 dark:bg-yellow-500/10 dark:text-yellow-300 dark:border-yellow-500/20",
     // },
     {
-      name: "Customer Support",
+      name: "Customer Relation",
       className:
         "bg-pink-100 text-pink-700 border-pink-200 dark:bg-pink-500/10 dark:text-pink-300 dark:border-pink-500/20",
-    },
-    {
-      name: "etc..",
-      className:
-        "bg-gray-100 text-gray-700 border-gray-200 dark:bg-gray-500/10 dark:text-gray-300 dark:border-gray-500/20",
     },
   ];
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden overflow-y-hidden bg-background flex flex-col items-center justify-center">
+    <div className="relative w-full overflow-hidden overflow-y-hidden bg-background flex flex-col items-center justify-center">
       <ParticlesBackground />
-      <main className="relative z-10 container max-w-7xl mx-auto px-6 flex flex-col items-center justify-center h-full">
+      <main className="relative !h-[90vh] max-h-[90vh] z-10 container max-w-7xl mx-auto px-6 flex flex-col items-center justify-center h-full">
         <FadeIn>
           <section className="text-center mb-12">
             <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-xs font-medium mb-8 bg-background/50 backdrop-blur-sm border-primary/20 animate-pulse">
               🚀 3+ Years of Full-Stack Expertise
             </div>
 
-            <h1 className="md:text-5xl text-2xl md:text-7xl font-bold tracking-tight mb-6">
+            <h1 className="md:text-5xl text-2xl md:text-7xl font-bold tracking-tight md:mb-6 mb-4">
               Full-Stack <span className="text-primary">Developer</span>
               <span className="block text-lg md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
                 Crafting Modern, Scalable & User-Friendly Digital Products
               </span>
             </h1>
 
-            <p
-              className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 md:mt-20 mt-4 tracking-tight
-leading-relaxed"
-            >
+            <p className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 md:mb-10 md:mt-20 mt-4 tracking-tight leading-relaxed">
               I create modern websites that help businesses build trust, attract
               more customers, and strengthen their brand. By focusing on speed,
               user experience, and visibility, I help businesses stand out and
