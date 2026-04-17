@@ -27,7 +27,7 @@ const ContactInfo = () => {
 
   return (
     <div
-      className="fixed w-2/5 md:left-9/10 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
+      className="fixed w-3/5 md:left-9/10 left-7/9 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300"
       onMouseEnter={() => setIsPopoverOpen(true)}
       onMouseLeave={() => setIsPopoverOpen(false)}
     >

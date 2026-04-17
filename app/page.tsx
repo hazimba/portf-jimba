@@ -71,14 +71,14 @@ const Home = async () => {
               🚀 3+ Years of Full-Stack Expertise
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+            <h1 className="md:text-5xl text-3xl md:text-7xl font-bold tracking-tight mb-6">
               Full-Stack <span className="text-primary">Developer</span>
-              <span className="block text-2xl md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
+              <span className="block text-xl md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
                 Crafting Modern, Scalable & User-Friendly Digital Products
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 md:mt-20 mt-12">
+            <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 md:mt-20 mt-12">
               I build fast, responsive web applications with a focus on clean UI
               and performance. Bridging the gap between complex backend logic
               and polished frontend design.
@@ -89,7 +89,7 @@ const Home = async () => {
                 <Badge
                   key={tech.name}
                   variant="outline"
-                  className={`px-3 py-3 text-sm font-semibold uppercase tracking-wider rounded-md ${tech.className}`}
+                  className={`px-3 py-3 text-xs font-semibold uppercase tracking-wider rounded-md ${tech.className}`}
                 >
                   {tech.name}
                 </Badge>
