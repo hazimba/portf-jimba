@@ -1,87 +1,78 @@
+"use client";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function PortfolioTabs() {
-  const experiences = [
-    {
-      title: "Fullstack Developer",
-      company: "Swift Haulage Berhad",
-      duration: "2024 April - Present",
-      description:
-        "Developed and maintained the frontend of the company's logistics internal system",
-    },
-    {
-      title: "Frontend Developer",
-      company: "Homa2u Sdn Bhd",
-      duration: "2023 November - 2024 April",
-      description:
-        "Built and maintained the frontend of the company's e-commerce platform, ensuring a seamless user experience and responsive design.",
-    },
-  ];
+  const pathname = usePathname();
+  const [activeTab, setActiveTab] = useState(pathname);
 
-  const projects = [
-    {
-      title: "TM Tours Sdn Bhd",
-      techStack: "Next.js, Cloudflare, Tailwind, Supabase, Node.js, React",
-      description:
-        "Build a whole new website for the company with a modern design and better performance. The website features a dynamic tour listing, and an admin dashboard for managing tours.",
-    },
-  ];
+  useEffect(() => {
+    setActiveTab(pathname);
+  }, [pathname]);
+
+  // Helper to check if the active path is hidden inside the "More" menu
+  const isMoreActive = ["/experience", "/education", "/contact"].includes(
+    pathname
+  );
 
   return (
-    <Tabs defaultValue="experience" className="w-full">
-      <div className="flex justify-center mb-8">
+    <Tabs value={activeTab} className="w-full">
+      <div className="flex justify-center items-center">
         <TabsList>
-          <TabsTrigger value="experience">Experience</TabsTrigger>
-          <TabsTrigger value="projects">Projects</TabsTrigger>
+          {/* Always Visible */}
+          <TabsTrigger value="/">
+            <Link href="/">Home</Link>
+          </TabsTrigger>
+
+          <TabsTrigger value="/project">
+            <Link href="/project">Projects</Link>
+          </TabsTrigger>
+
+          {/* Desktop Only: Individual Tabs */}
+          <div className="hidden md:flex">
+            <TabsTrigger value="/experience">
+              <Link href="/experience">Experience</Link>
+            </TabsTrigger>
+            <TabsTrigger value="/education">
+              <Link href="/education">Education</Link>
+            </TabsTrigger>
+            <TabsTrigger value="/contact">
+              <Link href="/contact">Contact</Link>
+            </TabsTrigger>
+          </div>
+
+          {/* Mobile Only: "More" Dropdown */}
+          <div className="md:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <TabsTrigger value="more" className="flex items-center gap-1">
+                  More <ChevronDown className="h-4 w-4" />
+                </TabsTrigger>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem asChild>
+                  <Link href="/experience">Experience</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/education">Education</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/contact">Contact</Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </TabsList>
       </div>
-
-      <TabsContent value="experience" className="space-y-4">
-        {experiences.map((exp, idx) => (
-          <Card key={idx}>
-            <CardHeader>
-              <div className="flex justify-between items-start">
-                <div>
-                  <CardTitle>{exp.title}</CardTitle>
-                  <CardDescription>{exp.company}</CardDescription>
-                </div>
-                <span className="text-sm text-muted-foreground">
-                  {exp.duration}
-                </span>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <p>{exp.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </TabsContent>
-
-      <TabsContent value="projects" className="grid gap-6 md:grid-cols-2">
-        {projects.map((proj, idx) => (
-          <Card key={idx} className="overflow-hidden">
-            <div className="aspect-video bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground italic">
-                Project Preview
-              </span>
-            </div>
-            <CardHeader>
-              <CardTitle>{proj.title}</CardTitle>
-              <CardDescription>{proj.techStack}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="">{proj.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </TabsContent>
     </Tabs>
   );
 }
