@@ -2,7 +2,13 @@ import { TechStackRender } from "@/components/animation-render-motion";
 import FadeIn from "@/components/fade-in";
 import ParticlesBackground from "@/components/particles-bg";
 import HomeSlider, { SliderNext, SliderPrev } from "@/components/home-slider";
-import { ArrowLeft, ArrowRight, Mail, ExternalLink, MapPin } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Mail,
+  ExternalLink,
+  MapPin,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,131 +43,120 @@ const Home = async () => {
   );
 
   const aboutPanel = (
-    <main className="relative h-full z-10 container max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-8 flex flex-col overflow-hidden">
+    <main className="relative h-full z-10 container max-w-screen mx-auto px-4 md:px-6 py-6 md:py-12 flex flex-col overflow-y-auto">
       <FadeIn>
-        <div className="flex flex-col gap-3 md:gap-4">
+        <div className="flex flex-col gap-8 md:gap-12 max-w-5xl mx-auto w-full">
           <div className="flex items-center justify-between">
             <SliderPrev className="flex items-center gap-2 text-xs text-muted-foreground hover:text-[#4ADE80] transition-colors cursor-pointer">
               <ArrowLeft size={12} />
               Back
             </SliderPrev>
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#4ADE80]/40 bg-[#4ADE80]/10 px-2.5 py-1 text-[10px] font-medium text-[#4ADE80]">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-[#4ADE80]/40 bg-[#4ADE80]/10 px-3 py-1 text-[10px] font-medium text-[#4ADE80]">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#4ADE80] animate-pulse" />
               Open to opportunities
             </div>
           </div>
 
-          <div className="grid grid-cols-[1fr_auto] gap-4 items-start">
-            <div className="min-w-0">
-              <h2 className="text-2xl md:text-5xl font-bold tracking-tight">
-                M. Hazim <span className="text-[#4ADE80]">Abu Bakar</span>
-              </h2>
-              <p className="text-xs md:text-sm font-medium text-muted-foreground mt-1">
-                Full-Stack Developer · React · Node.js · Tailwind · MongoDB
-              </p>
-              <p className="text-[11px] md:text-sm text-muted-foreground mt-2 md:mt-3 leading-relaxed max-w-2xl">
-                Self-taught developer with 3+ years shipping production web
-                apps across logistics, travel, and e-commerce. Prior 2 years
-                as a Development Engineer (Honda Civic 2022 QAV lead)
-                sharpened my delivery discipline and cross-team collaboration.
+          <div className="flex justify-between gap-6 md:gap-10 items-start">
+            <div className="min-w-0 space-y-3 md:space-y-5">
+              <div>
+                <h2 className="text-2xl md:text-5xl font-bold tracking-tight">
+                  M. Hazim <span className="text-[#4ADE80]">Abu Bakar</span>
+                </h2>
+                <p className="text-xs md:text-sm text-muted-foreground mt-1.5">
+                  Full-Stack Developer · Klang, Malaysia
+                </p>
+              </div>
+              <p className="text-xs md:text-base text-muted-foreground leading-relaxed max-w-2xl">
+                Hi — I took the long way here. Two years in engineering, then
+                three (and counting) building web products. I enjoy shaping
+                ideas into clean, reliable interfaces, and I care about the
+                small details that make software feel nice to use.
               </p>
             </div>
             <div className="relative w-24 h-28 md:w-44 md:h-52 shrink-0">
               <div className="absolute -inset-2 bg-[#4ADE80]/20 blur-2xl rounded-full" />
-              <div className="relative w-full h-full overflow-hidden rounded-[62%_38%_46%_54%/48%_56%_44%_52%] border-2 border-[#4ADE80]/40 shadow-xl rotate-3">
+              <div className="relative w-full h-full overflow-hidden rounded-[62%_38%_46%_54%/48%_56%_44%_52%] border-2 border-[#4ADE80]/40 shadow-xs rotate-3">
                 <Image
-                  src="/image.png"
+                  src="/hazim.png"
                   alt="M. Hazim Abu Bakar"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 768px) 96px, 176px"
                 />
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
-            {[
-              { label: "Experience", value: "3+ yrs" },
-              { label: "Companies", value: "4" },
-              { label: "QA Cycle Cut", value: "80%" },
-              { label: "Based in", value: "Klang, MY" },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="rounded-lg border bg-card/50 backdrop-blur-sm px-3 py-2"
-              >
-                <p className="text-[9px] md:text-[10px] uppercase text-muted-foreground tracking-wider">
-                  {s.label}
-                </p>
-                <p className="text-sm md:text-xl font-bold mt-0.5">
-                  {s.value}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
-            <div className="rounded-lg border bg-card/50 backdrop-blur-sm p-3">
-              <p className="text-[9px] md:text-[10px] uppercase text-muted-foreground tracking-wider mb-2">
-                Tech Stack
+          <div className="space-y-4 md:space-y-5">
+            <div>
+              <p className="text-sm md:text-base font-semibold">
+                Four hats, one hire.
               </p>
-              <div className="flex flex-wrap gap-1.5">
-                {[
-                  "React.js",
-                  "Next.js",
-                  "Vue.js",
-                  "TypeScript",
-                  "Node.js",
-                  "MongoDB",
-                  "Supabase",
-                  "Tailwind",
-                  "Ant Design",
-                  "Playwright",
-                  "Figma",
-                ].map((t) => (
-                  <span
-                    key={t}
-                    className="text-[10px] px-2 py-0.5 rounded-full border border-[#4ADE80]/30 bg-[#4ADE80]/5 text-foreground/80"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+              <p className="text-[11px] md:text-sm text-muted-foreground mt-1">
+                The roles I slip into comfortably on a small product team.
+              </p>
             </div>
-            <div className="rounded-lg border bg-card/50 backdrop-blur-sm p-3">
-              <p className="text-[9px] md:text-[10px] uppercase text-muted-foreground tracking-wider mb-2">
-                Highlights
-              </p>
-              <ul className="space-y-1 text-[11px] md:text-xs text-muted-foreground">
-                <li className="flex gap-1.5">
-                  <span className="text-[#4ADE80] shrink-0">▸</span>
-                  Cut logistics QA cycles 80% via Playwright automation @ Swift
-                  Haulage
-                </li>
-                <li className="flex gap-1.5">
-                  <span className="text-[#4ADE80] shrink-0">▸</span>
-                  Led Admin Homepage revamp → +20% client satisfaction @
-                  ThunderQuote
-                </li>
-                <li className="flex gap-1.5">
-                  <span className="text-[#4ADE80] shrink-0">▸</span>
-                  Shipped Homa2U site → +15% customer engagement
-                </li>
-                <li className="flex gap-1.5">
-                  <span className="text-[#4ADE80] shrink-0">▸</span>
-                  Led Honda Civic 2022 QAV as Development Engineer
-                </li>
-              </ul>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {[
+                { role: "Designer", tag: "An eye for the visual" },
+                { role: "Client Relations", tag: "Comfortable with people" },
+                { role: "Quality-first", tag: "Ships with care" },
+                { role: "Engineer", tag: "Happiest at the keyboard" },
+              ].map((s) => (
+                <div
+                  key={s.role}
+                  className="rounded-xl border border-border/60 bg-card/40 backdrop-blur-sm px-4 py-4 md:px-5 md:py-5"
+                >
+                  <p className="text-sm md:text-lg font-semibold">{s.role}</p>
+                  <p className="text-[10px] md:text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                    {s.tag}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-2 md:gap-3 items-center">
-            <div className="rounded-lg border bg-card/50 backdrop-blur-sm px-3 py-2 text-[11px] md:text-xs text-muted-foreground">
-              <span className="font-semibold text-foreground">Education:</span>{" "}
-              Sigma School — Web Dev (2022–23) · UiTM Penang — B.Eng Chemical
-              (2017–20, CGPA 3.14)
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+            <div className="rounded-xl border border-border/60 md:col-span-1 bg-card/40 backdrop-blur-sm p-4 md:p-5">
+              <p className="text-[10px] md:text-xs uppercase text-muted-foreground tracking-wider mb-3">
+                Also comfortable with
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Vercel", "Cloudflare", "Ant Design", "SEO", "Figma"].map(
+                  (s) => (
+                    <span
+                      key={s}
+                      className="text-[10px] md:text-xs px-2.5 py-1 rounded-full border border-[#4ADE80]/30 bg-[#4ADE80]/5 text-foreground/80"
+                    >
+                      {s}
+                    </span>
+                  )
+                )}
+              </div>
             </div>
+            <div className="rounded-xl border border-border/60 bg-card/40 md:col-span-2 backdrop-blur-sm p-4 md:p-5">
+              <p className="text-[10px] md:text-xs uppercase text-muted-foreground tracking-wider mb-3">
+                A recent win
+              </p>
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                Led{" "}
+                <span className="text-foreground font-medium">
+                  TM Tour Travel
+                </span>{" "}
+                end-to-end — planning, design, development, QA, and launch — all
+                on my own. Shipped a site the client was genuinely happy with.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 md:gap-6 items-center pt-4 md:pt-6 border-t border-border/40">
+            <p className="text-xs md:text-sm text-muted-foreground">
+              <span className="text-foreground font-medium">
+                Off the clock:
+              </span>{" "}
+              gaming, travelling, and the occasional run.
+            </p>
             <div className="flex gap-2 md:justify-end">
               <Link
                 href="mailto:hazimbaa@gmail.com"
