@@ -99,10 +99,10 @@ const Home = async () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[
-                { role: "Designer", tag: "An eye for the visual" },
+                { role: "Designer", tag: "A good sense for design" },
                 { role: "Client Relations", tag: "Comfortable with people" },
-                { role: "Quality-first", tag: "Ships with care" },
-                { role: "Engineer", tag: "Happiest at the keyboard" },
+                { role: "Quality-first", tag: "Focused on quality" },
+                { role: "Engineer", tag: "Passionate about coding." },
               ].map((s) => (
                 <div
                   key={s.role}
@@ -142,10 +142,11 @@ const Home = async () => {
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                 Led{" "}
                 <span className="text-foreground font-medium">
-                  TM Tour Travel
+                  a travel agency content management system project
                 </span>{" "}
                 end-to-end — planning, design, development, QA, and launch — all
-                on my own. Shipped a site the client was genuinely happy with.
+                on my own. Delivered a site that the client was genuinely happy
+                with.
               </p>
             </div>
           </div>

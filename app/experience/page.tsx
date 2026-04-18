@@ -58,8 +58,7 @@ const ExperiencePage = async () => {
         "Coordinated with cross-functional teams to gather requirements and define project scope.",
       ],
       outcome: [
-        "Successfully launched the project management tool, which improved team collaboration and project tracking.",
-        "Received positive feedback from users for the improved functionality and user interface.",
+        "Received positive feedback from the client for the efficient project management and timely delivery of automotive parts.",
       ],
       related: false,
     },

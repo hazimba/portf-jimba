@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto_Mono } from "next/font/google";
-
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -70,6 +70,7 @@ export default function RootLayout({
             </div>
           </header>
           {children}
+          <Toaster position="top-center" />
         </ThemeProvider>
         <ContactInfo />
       </body>

@@ -17,7 +17,7 @@ import Image from "next/image";
 const EducationPage = () => {
   const education = [
     {
-      institution: "Sigma School",
+      institution: "Programming School",
       degree: "Foundation in Software Engineering",
       duration: "2022 - 2023",
       logo: "/sigma-school.webp",
@@ -44,7 +44,7 @@ const EducationPage = () => {
         <main className="container max-w-5xl mx-auto px-4 md:px-6 py-20">
           <section className="text-center mb-12 md:mb-20">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Education</h1>
-            <p className="text-lg text-muted-foreground max-w-5xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-base max-w-5xl mx-auto">
               A strong foundation in computer science and software engineering
               principles, complemented by hands-on experience with modern
               technologies and frameworks.
@@ -56,7 +56,7 @@ const EducationPage = () => {
               <Card key={idx} className="overflow-hidden">
                 <CardHeader>
                   <div className="flex items-center space-x-4 mb-2">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                    <div className="relative !w-12 h-12 rounded-full overflow-hidden">
                       <Image
                         src={edu.logo}
                         alt={edu.institution}
@@ -64,9 +64,11 @@ const EducationPage = () => {
                         className="object-cover bg-white"
                       />
                     </div>
-                    <div>
-                      <CardTitle className="text-xl">{edu.degree}</CardTitle>
-                      <CardDescription className="text-lg text-primary">
+                    <div className="">
+                      <CardTitle className="text-lg md:text-2xl font-bold tracking-tight">
+                        {edu.degree}
+                      </CardTitle>
+                      <CardDescription className="text-sm md:text-base text-primary font-medium">
                         {edu.institution}
                       </CardDescription>
                     </div>
@@ -91,7 +93,7 @@ const EducationPage = () => {
                           View Key Courses & Projects
                         </AccordionTrigger>
                         <AccordionContent>
-                          <ul className="list-disc text-base pl-5 space-y-2 text-muted-foreground">
+                          <ul className="list-disc text-xs md:text-sm pl-5 space-y-2 text-muted-foreground/80">
                             {edu.highlights.map((item, i) => (
                               <li key={i} className="leading-relaxed">
                                 {item}

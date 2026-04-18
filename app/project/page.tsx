@@ -1,5 +1,7 @@
+"use client";
 import AnimationBg from "@/components/animation-bg";
 import FadeIn from "@/components/fade-in";
+import { toast } from "sonner";
 import ParticlesBackground from "@/components/particles-bg";
 import {
   Accordion,
@@ -14,15 +16,15 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectsPage = async () => {
+const ProjectsPage = () => {
   const projects = [
     {
-      title: "TM Tours Sdn Bhd",
+      title: "Some Travel Agency",
       techStack: ["Next.js", "Supabase", "Node.js"],
       description:
         "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
       keyFeatures: ["Bulk CSV data processing", "Full CRUD Admin Dashboard"],
-      image: "/tm-official-logo.png",
+      image: "/travel-agent.jpg",
       website: "https://tmtourtravel-frontoffice.vercel.app/",
       github: "https://github.com/hazimba/tmtourtravel-frontoffice",
       category: "Content Management System",
@@ -151,26 +153,40 @@ const ProjectsPage = async () => {
                                     ))}
                                   </ul>
                                   <div className="mt-4 flex justify-end gap-2">
-                                    <Link
+                                    {/* <Link
                                       href={proj.website}
                                       target="_blank"
                                       rel="noopener noreferrer"
+                                    > */}
+                                    <Badge
+                                      variant="outline"
+                                      onClick={() =>
+                                        toast.error(
+                                          "Feature not available yet!"
+                                        )
+                                      }
                                     >
-                                      <Badge variant="outline">
-                                        Website{" "}
-                                        <ArrowRight className="w-3 h-3 ml-1" />
-                                      </Badge>
-                                    </Link>
+                                      Website{" "}
+                                      <ArrowRight className="w-3 h-3 ml-1" />
+                                    </Badge>
+                                    {/* </Link>
                                     <Link
                                       href={proj.github}
                                       target="_blank"
                                       rel="noopener noreferrer"
+                                    > */}
+                                    <Badge
+                                      variant="outline"
+                                      onClick={() =>
+                                        toast.error(
+                                          "Feature not available yet!"
+                                        )
+                                      }
                                     >
-                                      <Badge variant="outline">
-                                        GitHub{" "}
-                                        <ArrowRight className="w-3 h-3 ml-1" />
-                                      </Badge>
-                                    </Link>
+                                      GitHub{" "}
+                                      <ArrowRight className="w-3 h-3 ml-1" />
+                                    </Badge>
+                                    {/* </Link> */}
                                   </div>
                                 </AccordionContent>
                               </AccordionItem>
@@ -190,31 +206,38 @@ const ProjectsPage = async () => {
                               ))}
                             </ul>
                             <div className="mt-8 flex justify-end gap-4">
-                              <Link
+                              {/* <Link
+                                href={""}
                                 href={proj.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                              > */}
+                              <Badge
+                                onClick={() =>
+                                  toast.error("Feature not available yet!")
+                                }
+                                variant="outline"
+                                className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
                               >
-                                <Badge
-                                  variant="outline"
-                                  className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
-                                >
-                                  Github <ArrowRight className="w-3 h-3 ml-1" />
-                                </Badge>
-                              </Link>
-                              <Link
+                                Github <ArrowRight className="w-3 h-3 ml-1" />
+                              </Badge>
+                              {/* </Link> */}
+                              {/* <Link
+                                href={""}
                                 href={proj.website}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                              > */}
+                              <Badge
+                                onClick={() =>
+                                  toast.error("Feature not available yet!")
+                                }
+                                variant="outline"
+                                className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
                               >
-                                <Badge
-                                  variant="outline"
-                                  className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
-                                >
-                                  Website{" "}
-                                  <ArrowRight className="w-3 h-3 ml-1" />
-                                </Badge>
-                              </Link>
+                                Website <ArrowRight className="w-3 h-3 ml-1" />
+                              </Badge>
+                              {/* </Link> */}
                             </div>
                           </div>
                         </CardContent>
