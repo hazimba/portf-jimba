@@ -5,31 +5,38 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import {
-  Phone,
-  Mail,
+  ExternalLink,
   //   Github,
   FileText,
+  Mail,
   MessageCircle,
-  ExternalLink,
+  Phone,
 } from "lucide-react";
 import { useRef, useState } from "react";
-import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const ContactInfo = () => {
+  const pathname = usePathname();
+
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // if (pathname === "/") {
+  //   return null;
+  // }
+
   const contactDetails = {
     phone: "+601140432883",
     email: "hazimbaa@gmail.com",
-    github: "https://github.com/hazimbakar",
-    resumeUrl: "/my-resume.pdf",
+    github: "https://github.com/hazimba",
+    resumeUrl:
+      "https://drive.google.com/file/d/1Qp2f5iZO5tq7BcbrnvCh-0akVnFrCqbx/view?usp=sharing",
   };
 
   return (
     <div
-      className={`fixed w-4/5 md:left-8/7 left-19/18 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300 ${
+      className={`fixed w-4/5 md:left-8/7 left-19/19 -translate-x-1/2 bottom-5 md:bottom-5 z-50 transition-all duration-300 ${
         isPopoverOpen ? "opacity-100" : "opacity-30 hover:opacity-100"
       }`}
       onMouseEnter={() => {
@@ -44,7 +51,7 @@ const ContactInfo = () => {
     >
       <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
         <PopoverTrigger asChild>
-          <button className="group gap-4 text-xs font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-4 py-1 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
+          <button className="group  animate-pulse gap-4 text-xs font-medium tracking-wide cursor-pointer bg-secondary/90 text-primary flex items-center px-4 py-1 rounded-full transition-all duration-300 border border-primary shadow-lg hover:scale-105 active:scale-95">
             <span>Contact Me!</span>
             <MessageCircle className="shrink-0 size-3" />
           </button>
