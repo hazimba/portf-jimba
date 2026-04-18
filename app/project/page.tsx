@@ -39,15 +39,11 @@ const ProjectsPage = async () => {
       category: "Content Management System",
     },
     {
-      title: "XYZ Sdn Bhd",
+      title: "Hazim Bakar Portfolio",
       techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
-      description:
-        "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
-      keyFeatures: [
-        "New Website with modern design",
-        "Mobile responsive and optimized for performance",
-      ],
-      image: "/swift-lorry.jpg",
+      description: "A personal portfolio showcasing my projects and skills.",
+      keyFeatures: [],
+      image: "/image.png",
       website: "https://tmtourtravel-frontoffice.vercel.app/",
       github: "https://github.com/hazimba/tmtourtravel-frontoffice",
       category: "Landing Page",
