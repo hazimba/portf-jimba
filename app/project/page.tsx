@@ -28,17 +28,6 @@ const ProjectsPage = async () => {
       category: "Content Management System",
     },
     {
-      title: "TM Tours Sdn Bhd",
-      techStack: ["Next.js", "Supabase", "Node.js"],
-      description:
-        "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
-      keyFeatures: ["Bulk CSV data processing", "Full CRUD Admin Dashboard"],
-      image: "/tm-official-logo.png",
-      website: "https://tmtourtravel-frontoffice.vercel.app/",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
-      category: "Content Management System",
-    },
-    {
       title: "Hazim Bakar Portfolio",
       techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
       description: "A personal portfolio showcasing my projects and skills.",
