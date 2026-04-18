@@ -1,3 +1,4 @@
+"use client";
 import { TechStackRender } from "@/components/animation-render-motion";
 import FadeIn from "@/components/fade-in";
 import ParticlesBackground from "@/components/particles-bg";
@@ -11,8 +12,9 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "sonner";
 
-const Home = async () => {
+const Home = () => {
   const heroPanel = (
     <main className="relative h-full z-10 container max-w-7xl mx-auto px-6 flex flex-col items-center justify-center overflow-hidden">
       <FadeIn>
@@ -123,16 +125,21 @@ const Home = async () => {
                 Also comfortable with
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Vercel", "Cloudflare", "Ant Design", "SEO", "Figma"].map(
-                  (s) => (
-                    <span
-                      key={s}
-                      className="text-[10px] md:text-xs px-2.5 py-1 rounded-full border border-[#4ADE80]/30 bg-[#4ADE80]/5 text-foreground/80"
-                    >
-                      {s}
-                    </span>
-                  )
-                )}
+                {[
+                  "Vercel",
+                  "Cloudflare",
+                  "Ant Design",
+                  "SEO",
+                  "Figma",
+                  "Hosting",
+                ].map((s) => (
+                  <span
+                    key={s}
+                    className="text-[10px] md:text-xs px-2.5 py-1 rounded-full border border-[#4ADE80]/30 bg-[#4ADE80]/5 text-foreground/80"
+                  >
+                    {s}
+                  </span>
+                ))}
               </div>
             </div>
             <div className="rounded-xl border border-border/60 bg-card/40 md:col-span-2 backdrop-blur-sm p-4 md:p-5">
@@ -167,9 +174,13 @@ const Home = async () => {
                 Email
               </Link>
               <Link
-                href="https://www.linkedin.com/in/hazimba"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={""}
+                onClick={() => {
+                  toast.error("LinkedIn profile is currently unavailable.");
+                }}
+                // href="https://www.linkedin.com/in/hazimba"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[11px] md:text-xs px-3 py-1.5 rounded-full border border-[#4ADE80]/50 hover:bg-[#4ADE80]/10 transition-colors"
               >
                 <ExternalLink size={12} />

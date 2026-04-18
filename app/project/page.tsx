@@ -214,7 +214,9 @@ const ProjectsPage = () => {
                               > */}
                               <Badge
                                 onClick={() =>
-                                  toast.error("Feature not available yet!")
+                                  toast.error(
+                                    "Redirect to GitHub currently unavailable."
+                                  )
                                 }
                                 variant="outline"
                                 className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
@@ -230,7 +232,9 @@ const ProjectsPage = () => {
                               > */}
                               <Badge
                                 onClick={() =>
-                                  toast.error("Feature not available yet!")
+                                  toast.error(
+                                    "Redirect to website currently unavailable."
+                                  )
                                 }
                                 variant="outline"
                                 className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
