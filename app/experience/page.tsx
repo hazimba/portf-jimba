@@ -17,7 +17,7 @@ const ExperiencePage = async () => {
   const experiences = [
     {
       title: "Fullstack Developer",
-      company: "Swift Haulage Berhad",
+      company: "Some Logistic Company",
       duration: "2024 April - Present",
       description:
         "Developed and maintained the company's logistics internal system",
@@ -33,7 +33,7 @@ const ExperiencePage = async () => {
     },
     {
       title: "Software Developer",
-      company: "Homa2u Sdn Bhd",
+      company: "Some Bathroom Makeover && Tiles Company",
       duration: "2023 November - 2024 April",
       description:
         "Built and maintained the frontend of the company's e-commerce platform, ensuring a seamless user experience and responsive design.",
@@ -49,7 +49,7 @@ const ExperiencePage = async () => {
     },
     {
       title: "Development Engineer",
-      company: "Erect Engineering Sdn Bhd",
+      company: "Some Automotive Company",
       duration: "2022 June - 2023 November",
       description:
         "Team leader for the development of automotive parts for the client, track and manage projects, tasks, and team collaboration.",

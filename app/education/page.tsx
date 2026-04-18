@@ -29,12 +29,12 @@ const EducationPage = () => {
       ],
     },
     {
-      institution: "UiTM Permatang Pauh",
-      degree: "Degree in Chemical Engineering",
+      institution: "UiTM",
+      degree: "Degree in Engineering",
       duration: "2017 - 2020",
       logo: "/uitm-logo.png",
       description:
-        "Bachelor's degree in Chemical Engineering, providing a strong foundation in engineering principles and problem-solving skills.",
+        "Bachelor's degree in Engineering, providing a strong foundation in engineering principles and problem-solving skills.",
     },
   ];
 
