@@ -20,7 +20,7 @@ const ExperiencePage = async () => {
       company: "Swift Haulage Berhad",
       duration: "2024 April - Present",
       description:
-        "Developed and maintained the frontend of the company's logistics internal system",
+        "Developed and maintained the company's logistics internal system",
       responsibilities: [
         "Implemented new features and optimized existing ones to enhance user experience and system performance.",
         "Collaborated with cross-functional teams to ensure seamless integration of frontend components with backend services.",
@@ -32,7 +32,7 @@ const ExperiencePage = async () => {
       related: true,
     },
     {
-      title: "Frontend Developer",
+      title: "Software Developer",
       company: "Homa2u Sdn Bhd",
       duration: "2023 November - 2024 April",
       description:
@@ -52,10 +52,10 @@ const ExperiencePage = async () => {
       company: "Erect Engineering Sdn Bhd",
       duration: "2022 June - 2023 November",
       description:
-        "Contributed to the development of the company’s internal project management tool, enhancing its functionality and user interface.",
+        "Team leader for the development of automotive parts for the client, track and manage projects, tasks, and team collaboration.",
       responsibilities: [
-        "Worked closely with the development team to implement new features and improve existing ones.",
-        "Participated in code reviews and collaborated on debugging and troubleshooting issues.",
+        "Led a team of engineers in the design and development of automotive components, ensuring adherence to project timelines and quality standards.",
+        "Coordinated with cross-functional teams to gather requirements and define project scope.",
       ],
       outcome: [
         "Successfully launched the project management tool, which improved team collaboration and project tracking.",
@@ -68,17 +68,17 @@ const ExperiencePage = async () => {
   return (
     <FadeIn>
       <div className="max-h-screen bg-background">
-        <main className="container max-w-7xl mx-auto px-4 py-20">
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 ">Experience</h1>
-            <p className="text-muted-foreground max-w-5xl text-sm md:text-base mx-auto">
+        <main className="container max-w-5xl mx-auto px-4 md:px-6 py-20">
+          <section className="text-center mb-12 md:mb-20">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Experience</h1>
+            <p className="text-muted-foreground text-sm md:text-base max-w-5xl mx-auto">
               A snapshot of my professional journey, showcasing my growth and
               impact in the tech industry. Each role has been a stepping stone,
               shaping my skills and passion for building innovative solutions.
             </p>
           </section>
 
-          <div className="max-w-5xl mx-auto space-y-12">
+          <div className="space-y-12">
             {[
               {
                 heading: "Related Experience",
@@ -92,7 +92,7 @@ const ExperiencePage = async () => {
               },
             ].map((group) => (
               <section key={group.keyPrefix} className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-semibold">
+                <h2 className="text-xl md:text-2xl font-bold tracking-tight">
                   {group.heading}
                 </h2>
                 <div className="space-y-6">
@@ -102,23 +102,23 @@ const ExperiencePage = async () => {
                       className="overflow-hidden"
                     >
                       <CardHeader>
-                        <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
+                        <div className="flex flex-col md:flex-row justify-between items-start gap-2">
                           <div>
-                            <CardTitle className="text-xl">
+                            <CardTitle className="text-lg md:text-2xl font-bold tracking-tight">
                               {exp.title}
                             </CardTitle>
-                            <CardDescription className="text-lg text-primary">
+                            <CardDescription className="text-sm md:text-base text-primary font-medium">
                               {exp.company}
                             </CardDescription>
                           </div>
-                          <span className="text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
+                          <span className="text-xs md:text-sm text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                             {exp.duration}
                           </span>
                         </div>
                       </CardHeader>
 
                       <CardContent>
-                        <p className="text-muted-foreground mb-4 text-medium md:text-lg font-mono font-medium">
+                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
                           {exp.description}
                         </p>
 
@@ -127,11 +127,11 @@ const ExperiencePage = async () => {
                             value={`item-${group.keyPrefix}-${idx}`}
                             className="border-none"
                           >
-                            <AccordionTrigger className="py-2 hover:no-underline">
+                            <AccordionTrigger className="text-xs font-semibold py-2 hover:no-underline">
                               View Key Contributions
                             </AccordionTrigger>
                             <AccordionContent>
-                              <ul className="list-disc text-base pl-5 space-y-2 text-muted-foreground">
+                              <ul className="list-disc text-xs md:text-sm pl-5 space-y-2 text-muted-foreground/80">
                                 {exp.outcome.map((item, i) => (
                                   <li key={i} className="leading-relaxed">
                                     {item}
