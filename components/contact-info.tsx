@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { toast } from "sonner";
 
 const ContactInfo = () => {
   const pathname = usePathname();
@@ -27,7 +28,7 @@ const ContactInfo = () => {
   // }
 
   const contactDetails = {
-    phone: "+601140432883",
+    phone: "+60114043XXXX",
     email: "hazimbaa@gmail.com",
     github: "https://github.com/hazimba",
     resumeUrl:
@@ -71,7 +72,7 @@ const ContactInfo = () => {
           </div>
 
           <div className="flex flex-col p-2">
-            <a
+            {/* <a
               href={`https://wa.me/${contactDetails.phone.replace(/\D/g, "")}`}
               target="_blank"
               className="flex items-center justify-between p-3 hover:bg-secondary rounded-lg transition-colors group"
@@ -83,7 +84,7 @@ const ContactInfo = () => {
                 </span>
               </div>
               <ExternalLink className="size-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
+            </a> */}
 
             <a
               href={`mailto:${contactDetails.email}`}
@@ -111,14 +112,15 @@ const ContactInfo = () => {
 
             <div className="my-2 border-t border-gray-100" />
 
-            <a
-              href={contactDetails.resumeUrl}
-              download
+            <div
+              onClick={() => toast.error("Feature not available yet!")}
+              // href={contactDetails.resumeUrl}
+              // download
               className="flex items-center gap-3 p-3 bg-primary/5 hover:bg-primary/10 text-primary rounded-lg transition-colors mb-1"
             >
               <FileText className="size-4" />
               <span className="text-sm font-bold">Download CV (PDF)</span>
-            </a>
+            </div>
           </div>
         </PopoverContent>
       </Popover>
