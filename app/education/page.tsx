@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 
-const EducationPage = () => {
+const EducationPage = async () => {
   const education = [
     {
       institution: "Programming School",
