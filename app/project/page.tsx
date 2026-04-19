@@ -1,7 +1,5 @@
-"use client";
 import AnimationBg from "@/components/animation-bg";
 import FadeIn from "@/components/fade-in";
-import { toast } from "sonner";
 import ParticlesBackground from "@/components/particles-bg";
 import {
   Accordion,
@@ -9,14 +7,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import RedirectButton from "./RedirectButton";
 
-const ProjectsPage = () => {
+const ProjectsPage = async () => {
   const projects = [
     {
       title: "Some Travel Agency",
@@ -152,42 +148,7 @@ const ProjectsPage = () => {
                                       </li>
                                     ))}
                                   </ul>
-                                  <div className="mt-4 flex justify-end gap-2">
-                                    {/* <Link
-                                      href={proj.website}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    > */}
-                                    <Badge
-                                      variant="outline"
-                                      onClick={() =>
-                                        toast.error(
-                                          "Feature not available yet!"
-                                        )
-                                      }
-                                    >
-                                      Website{" "}
-                                      <ArrowRight className="w-3 h-3 ml-1" />
-                                    </Badge>
-                                    {/* </Link>
-                                    <Link
-                                      href={proj.github}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                    > */}
-                                    <Badge
-                                      variant="outline"
-                                      onClick={() =>
-                                        toast.error(
-                                          "Feature not available yet!"
-                                        )
-                                      }
-                                    >
-                                      GitHub{" "}
-                                      <ArrowRight className="w-3 h-3 ml-1" />
-                                    </Badge>
-                                    {/* </Link> */}
-                                  </div>
+                                  <RedirectButton proj={proj} />
                                 </AccordionContent>
                               </AccordionItem>
                             </Accordion>
@@ -205,44 +166,7 @@ const ProjectsPage = () => {
                                 </li>
                               ))}
                             </ul>
-                            <div className="mt-8 flex justify-end gap-4">
-                              {/* <Link
-                                href={""}
-                                href={proj.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              > */}
-                              <Badge
-                                onClick={() =>
-                                  toast.error(
-                                    "Redirect to GitHub currently unavailable."
-                                  )
-                                }
-                                variant="outline"
-                                className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
-                              >
-                                Github <ArrowRight className="w-3 h-3 ml-1" />
-                              </Badge>
-                              {/* </Link> */}
-                              {/* <Link
-                                href={""}
-                                href={proj.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              > */}
-                              <Badge
-                                onClick={() =>
-                                  toast.error(
-                                    "Redirect to website currently unavailable."
-                                  )
-                                }
-                                variant="outline"
-                                className="cursor-pointer py-3 px-3 text-xs hover:bg-gray-100/50"
-                              >
-                                Website <ArrowRight className="w-3 h-3 ml-1" />
-                              </Badge>
-                              {/* </Link> */}
-                            </div>
+                            <RedirectButton proj={proj} />
                           </div>
                         </CardContent>
                       </Card>

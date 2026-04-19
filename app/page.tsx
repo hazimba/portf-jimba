@@ -1,4 +1,3 @@
-"use client";
 import { TechStackRender } from "@/components/animation-render-motion";
 import FadeIn from "@/components/fade-in";
 import ParticlesBackground from "@/components/particles-bg";
@@ -12,9 +11,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { toast } from "sonner";
 
-const Home = () => {
+const Home = async () => {
   const heroPanel = (
     <main className="relative h-full z-10 container max-w-7xl mx-auto px-6 flex flex-col items-center justify-center overflow-hidden">
       <FadeIn>
@@ -174,13 +172,10 @@ const Home = () => {
                 Email
               </Link>
               <Link
-                href={""}
-                onClick={() => {
-                  toast.error("LinkedIn profile is currently unavailable.");
-                }}
-                // href="https://www.linkedin.com/in/hazimba"
-                // target="_blank"
-                // rel="noopener noreferrer"
+                // soon to add actual LinkedIn profile
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-[11px] md:text-xs px-3 py-1.5 rounded-full border border-[#4ADE80]/50 hover:bg-[#4ADE80]/10 transition-colors"
               >
                 <ExternalLink size={12} />
