@@ -12,6 +12,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://hazim-bakar.com/project",
+  },
+};
 
 const ExperiencePage = async () => {
   const experiences = [

@@ -11,6 +11,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import Image from "next/image";
 import RedirectButton from "./RedirectButton";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://hazim-bakar.com/project",
+  },
+};
 
 const ProjectsPage = async () => {
   const projects = [

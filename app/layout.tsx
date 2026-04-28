@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hazim Bakar | Full-Stack Developer & Designer",
   description:
-    "Portfolio of Hazim, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
+    "Portfolio of Hazim Bakar, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
   keywords: [
     "Hazim Bakar",
     "Full-Stack Developer",
@@ -64,9 +64,6 @@ export const metadata: Metadata = {
     images: ["https://hazim-bakar.com/og-image.png"],
   },
   metadataBase: new URL("https://hazim-bakar.com"),
-  alternates: {
-    canonical: "https://hazim-bakar.com",
-  },
 };
 
 export default function RootLayout({
@@ -79,15 +76,15 @@ export default function RootLayout({
     "@type": "Person",
     name: "Hazim Bakar | Full-Stack Developer & Designer",
     description:
-      "Portfolio of Hazim, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
+      "Portfolio of Hazim Bakar, a full-stack and web developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
     url: "https://hazim-bakar.com",
     telephone: "011-40432883",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "No. Lot 3A-3, Level 4, Wisma Q, Jalan Pahang, Titiwangsa",
-      addressLocality: "Wilayah Persekutuan",
-      addressRegion: "Kuala Lumpur",
-      postalCode: "53000",
+      streetAddress: "1687 Jalan Haji Musran Kampung Rantau Panjang",
+      addressLocality: "Klang",
+      addressRegion: "Selangor",
+      postalCode: "42100",
       addressCountry: "MY",
     },
     sameAs: [

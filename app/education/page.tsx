@@ -12,7 +12,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://hazim-bakar.com/education",
+  },
+};
 
 const EducationPage = async () => {
   const education = [
