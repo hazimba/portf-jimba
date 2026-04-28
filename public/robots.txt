@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://hazim-bakar.com
+
+# Sitemaps
 Sitemap: https://hazim-bakar.com/sitemap.xml
