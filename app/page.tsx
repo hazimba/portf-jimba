@@ -78,7 +78,7 @@ const Home = async () => {
               <div className="absolute -inset-2 bg-[#4ADE80]/20 blur-2xl rounded-full" />
               <div className="relative w-full h-full overflow-hidden rounded-[62%_38%_46%_54%/48%_56%_44%_52%] border-2 border-[#4ADE80]/40 shadow-xs rotate-3">
                 <Image
-                  src="/hazim.png"
+                  src="https://mlapxffieyehdpvuzsyw.supabase.co/storage/v1/object/public/others/WhatsApp%20Image%202026-10-29%20at%2001.31.38.jpeg"
                   alt="M. Hazim Abu Bakar"
                   fill
                   className="object-cover object-center"

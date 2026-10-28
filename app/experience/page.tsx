@@ -15,6 +15,9 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Experience | Hazim Bakar",
+  description:
+    "Explore the professional journey of Hazim Bakar, highlighting his roles, responsibilities, and achievements in the tech industry.",
   alternates: {
     canonical: "https://hazim-bakar.com/project",
   },

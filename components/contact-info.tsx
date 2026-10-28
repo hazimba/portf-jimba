@@ -10,15 +10,11 @@ import {
   FileText,
   Mail,
   MessageCircle,
-  Phone,
 } from "lucide-react";
 import { useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 import { toast } from "sonner";
 
 const ContactInfo = () => {
-  const pathname = usePathname();
-
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
