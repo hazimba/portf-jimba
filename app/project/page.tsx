@@ -14,6 +14,9 @@ import RedirectButton from "./RedirectButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Projects | Hazim Bakar",
+  description:
+    "Explore a curated selection of projects showcasing innovative solutions, built with a focus on performance, scalability, and user experience.",
   alternates: {
     canonical: "https://hazim-bakar.com/project",
   },
@@ -31,16 +34,47 @@ const ProjectsPage = async () => {
       website: "https://tmtourtravel-frontoffice.vercel.app/",
       github: "https://github.com/hazimba/tmtourtravel-frontoffice",
       category: "Content Management System",
+      show: false,
+    },
+    {
+      title: "KBJ Training Center (Phase 1)",
+      techStack: ["Next.js", "Supabase", "Node.js"],
+      description: "Modernized training center using modern web technologies",
+      keyFeatures: ["Responsive design", "Interactive UI", "SEO optimized"],
+      image:
+        "https://mlapxffieyehdpvuzsyw.supabase.co/storage/v1/object/public/kem_bumi_jati/3b8ca958-ecf6-4522-94c7-0df0e708fe00.jpeg",
+      website: "https://kembumijati.com",
+      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+      category: "Content Management System",
+      show: false,
     },
     {
       title: "Hazim Bakar Portfolio",
       techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
       description: "A personal portfolio showcasing my projects and skills.",
-      keyFeatures: [],
+      keyFeatures: ["Responsive design", "Interactive UI", "SEO optimized"],
       image: "/image.png",
-      website: "https://tmtourtravel-frontoffice.vercel.app/",
+      website: "https://hazim-bakar.com",
       github: "https://github.com/hazimba/tmtourtravel-frontoffice",
       category: "Landing Page",
+      show: false,
+    },
+    {
+      title: "Self-Hosted AI Assistant & LLM API",
+      techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
+      description:
+        "A self-hosted AI assistant and LLM API for various applications.",
+      keyFeatures: [
+        "Customizable AI models",
+        "Easy integration",
+        "Scalable architecture",
+      ],
+      image:
+        "https://starryai.com/cdn-cgi/image/format=auto,quality=90/https%3A%2F%2Fcdn.prod.website-files.com%2F61554cf1696635e97e823d26%2F69084785cf4c36700265113e_2185cc91-5112-4096-aee8-dbaaff52e050.webp",
+      website: "",
+      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+      category: "Landing Page",
+      show: false,
     },
   ];
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto_Mono, Montserrat } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -9,6 +9,11 @@ import ContactInfo from "@/components/contact-info";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const montserrate = Montserrat({
+  variable: "--font-montserrate",
   subsets: ["latin"],
 });
 
@@ -23,6 +28,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hazim-bakar.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Hazim Bakar | Full-Stack Developer & Designer",
   description:
     "Portfolio of Hazim Bakar, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
@@ -37,6 +46,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  verification: {
+    google:
+      "google-site-verification=iH8q8IMNFrzE8d_ql4ZyWSjXvrtpvByO0YQn3jMUpIU",
   },
   authors: [{ name: "Hazim Bakar" }],
   openGraph: {
@@ -63,7 +76,6 @@ export const metadata: Metadata = {
       "Portfolio of Hazim, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
     images: ["https://hazim-bakar.com/og-image.png"],
   },
-  metadataBase: new URL("https://hazim-bakar.com"),
 };
 
 export default function RootLayout({
@@ -98,7 +110,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} ${montserrate.variable} antialiased`}
     >
       <body className="flex flex-col min-h-dvh">
         <ThemeProvider

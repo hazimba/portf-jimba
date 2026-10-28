@@ -16,6 +16,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
+  title: "Education | Hazim Bakar",
+  description:
+    "Explore the educational background of Hazim Bakar, highlighting his academic achievements and foundational knowledge in software engineering and computer science.",
   alternates: {
     canonical: "https://hazim-bakar.com/education",
   },
