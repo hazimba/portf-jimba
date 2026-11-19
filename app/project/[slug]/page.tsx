@@ -11,6 +11,7 @@ import { Metadata } from "next";
 import SEOPerformanceChart from "@/components/seo-performance-chart";
 import { getSearchConsoleData } from "@/lib/google-search-console";
 
+export const dynamic = "force-dynamic";
 interface Project {
   slug: string;
   title: string;
