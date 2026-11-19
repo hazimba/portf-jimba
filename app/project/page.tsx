@@ -1,12 +1,6 @@
 import AnimationBg from "@/components/animation-bg";
 import FadeIn from "@/components/fade-in";
 import ParticlesBackground from "@/components/particles-bg";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import Image from "next/image";
@@ -14,7 +8,10 @@ import RedirectButton from "./RedirectButton";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects | Hazim Bakar",
+  title: {
+    default: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
+    template: "%s | Hazim Bakar",
+  },
   description:
     "Explore a curated selection of projects showcasing innovative solutions, built with a focus on performance, scalability, and user experience.",
   alternates: {
@@ -25,41 +22,55 @@ export const metadata: Metadata = {
 const ProjectsPage = async () => {
   const projects = [
     {
-      title: "Some Travel Agency",
+      slug: "kem-bumi-jati",
+      title: "Kem Bumi Jati – Training Centre Website",
+      techStack: ["Next.js", "React", "TypeScript", "Supabase", "Cloudflare"],
+      description:
+        "Developed a responsive website for Kem Bumi Jati, a training centre in Shah Alam, Selangor. Implemented facility listings, image galleries, SEO metadata, Google Analytics tracking, and Cloudflare deployment.",
+      keyFeatures: [
+        "Responsive website design",
+        "Search engine optimization",
+        "Google Analytics 4 integration",
+        "Cloudflare Workers deployment",
+        "Training facility listings and galleries",
+      ],
+      image:
+        "https://images.kembumijati.com/kem_bumi_jati_header_background_img/1000144361.jpg",
+      website: "https://kembumijati.com",
+      github: "",
+      category: "Content Management System",
+      show: true,
+      gscProperty: "sc-domain:kembumijati.com",
+    },
+    {
+      slug: "muqrie-travel-agency",
+      title: "Muqrie Travel Agency",
       techStack: ["Next.js", "Supabase", "Node.js"],
       description:
         "A complete digital transformation for a travel agency featuring dynamic tour management and a robust admin dashboard.",
       keyFeatures: ["Bulk CSV data processing", "Full CRUD Admin Dashboard"],
       image: "/travel-agent.jpg",
-      website: "https://tmtourtravel-frontoffice.vercel.app/",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+      website: "https://muqrie.com",
+      github: "",
       category: "Content Management System",
       show: false,
+      gscProperty: "sc-domain:muqrie.com",
     },
     {
-      title: "KBJ Training Center (Phase 1)",
-      techStack: ["Next.js", "Supabase", "Node.js"],
-      description: "Modernized training center using modern web technologies",
-      keyFeatures: ["Responsive design", "Interactive UI", "SEO optimized"],
-      image:
-        "https://mlapxffieyehdpvuzsyw.supabase.co/storage/v1/object/public/kem_bumi_jati/3b8ca958-ecf6-4522-94c7-0df0e708fe00.jpeg",
-      website: "https://kembumijati.com",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
-      category: "Content Management System",
-      show: false,
-    },
-    {
+      slug: "hazim-bakar-portfolio",
       title: "Hazim Bakar Portfolio",
       techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
       description: "A personal portfolio showcasing my projects and skills.",
       keyFeatures: ["Responsive design", "Interactive UI", "SEO optimized"],
       image: "/image.png",
       website: "https://hazim-bakar.com",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+      github: "",
       category: "Landing Page",
       show: false,
+      gscProperty: "sc-domain:hazim-bakar.com",
     },
     {
+      slug: "self-hosted-ai-assistant",
       title: "Self-Hosted AI Assistant & LLM API",
       techStack: ["Next.js", "Cloudflare", "Supabase", "Node.js"],
       description:
@@ -72,7 +83,7 @@ const ProjectsPage = async () => {
       image:
         "https://starryai.com/cdn-cgi/image/format=auto,quality=90/https%3A%2F%2Fcdn.prod.website-files.com%2F61554cf1696635e97e823d26%2F69084785cf4c36700265113e_2185cc91-5112-4096-aee8-dbaaff52e050.webp",
       website: "",
-      github: "https://github.com/hazimba/tmtourtravel-frontoffice",
+      github: "",
       category: "Landing Page",
       show: false,
     },
@@ -85,14 +96,16 @@ const ProjectsPage = async () => {
         <main className="container max-w-5xl mx-auto px-4 md:px-6 py-20">
           <section className="text-center mb-12 md:mb-20">
             <div className="relative inline-flex items-center justify-center mb-6">
-              <h1 className="relative z-10 text-4xl md:text-5xl font-bold">
-                Projects
+              <h1 className="relative z-10 text-4xl md:text-5xl font-bold md:w-full text-center">
+                Web Development Projects
               </h1>
               <AnimationBg />
             </div>
             <p className="text-muted-foreground text-sm md:text-base max-w-5xl mx-auto">
-              Innovative solutions built with a focus on performance,
-              scalability, and user experience.
+              Explore websites, content management systems, and web applications
+              I&apos;ve developed using Next.js, React, Node.js, and Supabase.
+              Each project focuses on performance, usability, and solving
+              real-world business problems.
             </p>
           </section>
 
@@ -159,12 +172,21 @@ const ProjectsPage = async () => {
                           </div>
                         </CardHeader>
 
-                        <CardContent className="pt-4 md:pt-0">
+                        <CardContent className="pt-4 md:pt-0 flex flex-col justify-between h-full">
                           <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                             {proj.description}
                           </p>
+                          <div className="flex flex-wrap gap-1 mb-4 md:mb-6">
+                            <RedirectButton proj={proj} />
+                          </div>
+                          {/* <Link href={`/project/${proj.slug}`}>
+                            <Badge variant="default" className="cursor-pointer">
+                              Read Case Study{" "}
+                              <ArrowRight className="w-3 h-3 ml-1" />
+                            </Badge>
+                          </Link> */}
 
-                          <div className="md:hidden">
+                          {/* <div className="md:hidden">
                             <Accordion
                               type="single"
                               collapsible
@@ -193,9 +215,9 @@ const ProjectsPage = async () => {
                                 </AccordionContent>
                               </AccordionItem>
                             </Accordion>
-                          </div>
+                          </div> */}
 
-                          <div className="hidden md:block">
+                          {/* <div className="hidden md:block">
                             <ul className="space-y-2">
                               {proj.keyFeatures.map((feature, i) => (
                                 <li
@@ -208,7 +230,7 @@ const ProjectsPage = async () => {
                               ))}
                             </ul>
                             <RedirectButton proj={proj} />
-                          </div>
+                          </div> */}
                         </CardContent>
                       </Card>
                     ))}

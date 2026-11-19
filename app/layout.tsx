@@ -29,52 +29,52 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hazim-bakar.com"),
-  alternates: {
-    canonical: "/",
+
+  title: {
+    default: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
+    template: "%s | Hazim Bakar",
   },
-  title: "Hazim Bakar | Full-Stack Developer & Designer",
+
   description:
-    "Portfolio of Hazim Bakar, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
-  keywords: [
-    "Hazim Bakar",
-    "Full-Stack Developer",
-    "Web Developer",
-    "Software Engineer",
-    "React",
-  ],
+    "Hazim Bakar is a full-stack web developer in Malaysia with 3+ years of experience building SEO-friendly websites and scalable web applications using Next.js, React, Node.js, and PostgreSQL.",
+
   applicationName: "Hazim Bakar",
+
   robots: {
     index: true,
     follow: true,
   },
+
   verification: {
-    google:
-      "google-site-verification=iH8q8IMNFrzE8d_ql4ZyWSjXvrtpvByO0YQn3jMUpIU",
+    google: "iH8q8IMNFrzE8d_ql4ZyWSjXvrtpvByO0YQn3jMUpIU",
   },
+
   authors: [{ name: "Hazim Bakar" }],
+
   openGraph: {
-    title: "Hazim Bakar | Full-Stack Developer & Designer",
+    title: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
     description:
-      "Portfolio of Hazim, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
+      "Explore web development projects by Hazim Bakar, a Malaysian full-stack developer specializing in Next.js, React, Node.js, and PostgreSQL.",
     url: "https://hazim-bakar.com",
     siteName: "Hazim Bakar",
     images: [
       {
-        url: "https://hazim-bakar.com/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Hazim Bakar - Full-Stack Developer & Designer",
+        alt: "Hazim Bakar - Full-Stack Web Developer",
       },
     ],
     locale: "en_MY",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Hazim Bakar | Full-Stack Developer & Designer",
+    title: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
     description:
-      "Portfolio of Hazim, a full-stack developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
-    images: ["https://hazim-bakar.com/og-image.png"],
+      "Explore the portfolio and web development projects of Hazim Bakar.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -86,24 +86,32 @@ export default function RootLayout({
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Hazim Bakar | Full-Stack Developer & Designer",
+    "@id": "https://hazim-bakar.com/#person",
+    name: "Hazim Bakar",
+    alternateName: "M. Hazim Abu Bakar",
+    jobTitle: "Full-Stack Web Developer",
     description:
-      "Portfolio of Hazim Bakar, a full-stack and web developer with 3 years of experience building modern web applications using React, TypeScript, Supabase, Tailwind CSS, Node.js, and MongoDB.",
-    url: "https://hazim-bakar.com",
-    telephone: "011-40432883",
+      "Full-stack web developer based in Malaysia with 3+ years of experience building modern websites and web applications using Next.js, React, Node.js, and PostgreSQL.",
+    url: "https://hazim-bakar.com/",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "1687 Jalan Haji Musran Kampung Rantau Panjang",
       addressLocality: "Klang",
       addressRegion: "Selangor",
-      postalCode: "42100",
       addressCountry: "MY",
     },
+    knowsAbout: [
+      "Full-Stack Web Development",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Search Engine Optimization",
+    ],
     sameAs: [
       "https://www.facebook.com/hazimb4kar",
       "https://www.instagram.com/hazimba",
     ],
-    logo: "https://hazim-bakar.com/favicon.ico",
   };
 
   return (
