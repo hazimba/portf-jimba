@@ -112,7 +112,7 @@ export default function SEOPerformanceChart({ data }: { data: SEOData[] }) {
 
           <p className="text-[10px] text-muted-foreground">
             Reporting period: {data[0].date} to {data[data.length - 1].date}.
-            Updated from Google's latest available finalized data.
+            Updated from Google&apos;s latest available finalized data.
           </p>
         </>
       )}
