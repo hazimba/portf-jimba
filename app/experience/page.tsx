@@ -15,11 +15,11 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience | Hazim Bakar",
+  title: "Professional Experience",
   description:
-    "Explore the professional journey of Hazim Bakar, highlighting his roles, responsibilities, and achievements in the tech industry.",
+    "Explore the professional experience of Hazim Bakar, a full-stack web developer in Malaysia with expertise in React, Next.js, Node.js, and building scalable web applications.",
   alternates: {
-    canonical: "https://hazim-bakar.com/project",
+    canonical: "/experience",
   },
 };
 
@@ -27,7 +27,7 @@ const ExperiencePage = async () => {
   const experiences = [
     {
       title: "Fullstack Developer",
-      company: "Some Logistic Company",
+      company: "Swift Haulage Berhad",
       duration: "2024 April - Present",
       description:
         "Developed and maintained the company's logistics internal system",
@@ -43,7 +43,7 @@ const ExperiencePage = async () => {
     },
     {
       title: "Software Developer",
-      company: "Some Bathroom Makeover && Tiles Company",
+      company: "Homa2u Sdn Bhd",
       duration: "2023 November - 2024 April",
       description:
         "Built and maintained the frontend of the company's e-commerce platform, ensuring a seamless user experience and responsive design.",
@@ -59,7 +59,7 @@ const ExperiencePage = async () => {
     },
     {
       title: "Development Engineer",
-      company: "Some Automotive Company",
+      company: "Erect Engineering Sdn Bhd",
       duration: "2022 June - 2023 November",
       description:
         "Team leader for the development of automotive parts for the client, track and manage projects, tasks, and team collaboration.",
@@ -76,14 +76,17 @@ const ExperiencePage = async () => {
 
   return (
     <FadeIn>
-      <div className="max-h-screen bg-background">
+      <div className="min-h-screen bg-background">
         <main className="container max-w-5xl mx-auto px-4 md:px-6 py-20">
           <section className="text-center mb-12 md:mb-20">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Experience</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Professional Experience
+            </h1>
             <p className="text-muted-foreground text-sm md:text-base max-w-5xl mx-auto">
-              A snapshot of my professional journey, showcasing my growth and
-              impact in the tech industry. Each role has been a stepping stone,
-              shaping my skills and passion for building innovative solutions.
+              Explore my professional journey as a full-stack developer in
+              Malaysia, building web applications, logistics management systems,
+              and business solutions using React, Next.js, Node.js, and
+              PostgreSQL.
             </p>
           </section>
 
@@ -140,13 +143,29 @@ const ExperiencePage = async () => {
                               View Key Contributions
                             </AccordionTrigger>
                             <AccordionContent>
-                              <ul className="list-disc text-xs md:text-sm pl-5 space-y-2 text-muted-foreground/80">
-                                {exp.outcome.map((item, i) => (
-                                  <li key={i} className="leading-relaxed">
-                                    {item}
-                                  </li>
-                                ))}
-                              </ul>
+                              <div className="space-y-5">
+                                <div>
+                                  <h3 className="text-sm font-semibold mb-2">
+                                    Key Responsibilities
+                                  </h3>
+                                  <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-muted-foreground">
+                                    {exp.responsibilities.map((item, i) => (
+                                      <li key={i}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+
+                                <div>
+                                  <h3 className="text-sm font-semibold mb-2">
+                                    Achievements & Outcomes
+                                  </h3>
+                                  <ul className="list-disc pl-5 space-y-2 text-xs md:text-sm text-muted-foreground">
+                                    {exp.outcome.map((item, i) => (
+                                      <li key={i}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
                             </AccordionContent>
                           </AccordionItem>
                         </Accordion>

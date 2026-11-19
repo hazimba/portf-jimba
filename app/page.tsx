@@ -11,6 +11,23 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
+  description:
+    "Hazim Bakar is a full-stack web developer in Malaysia with 3+ years of experience building websites and web applications using Next.js, React, Node.js, and PostgreSQL.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Full-Stack Web Developer in Malaysia | Hazim Bakar",
+    description:
+      "Explore web development projects, technical expertise, and modern web applications built by Hazim Bakar.",
+    url: "https://hazim-bakar.com/",
+    type: "website",
+  },
+};
 
 const Home = async () => {
   const heroPanel = (
@@ -20,17 +37,19 @@ const Home = async () => {
           <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-[8px] font-medium mb-8 bg-background/50 backdrop-blur-sm border-primary/20 animate-pulse">
             🚀 3+ Years of Stressing with Programming
           </div>
-          <h1 className="md:text-5xl text-2xl md:text-7xl font-bold tracking-tight md:mb-6 mb-4">
-            Full-Stack <span className="text-[#4ADE80]">Developer</span>
+          <h1 className="md:text-7xl text-2xl font-bold tracking-tight">
+            Freelance Full-Stack{" "}
+            <span className="text-[#4ADE80]">Web Developer</span>
             <span className="block text-lg md:text-4xl font-medium text-muted-foreground mt-4 max-w-4xl mx-auto leading-snug">
-              Crafting Modern, Scalable & User-Friendly Digital Products
+              Building Modern Websites & Web Applications in Malaysia
             </span>
           </h1>
           <p className="text-xs md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 md:mb-10 md:mt-20 mt-4 tracking-tight leading-relaxed">
-            I create modern websites that help businesses build trust, attract
-            more customers, and strengthen their brand. By focusing on speed,
-            user experience, and visibility, I help businesses stand out and
-            make a better impression.
+            I&apos;m Hazim, a full-stack web developer based in Malaysia with 3+
+            years of experience building responsive websites and scalable web
+            applications using Next.js, React, Node.js, and PostgreSQL. I help
+            businesses create fast, SEO-friendly digital experiences that
+            attract customers and support growth.
           </p>
           <TechStackRender />
           <SliderNext className="w-full flex items-center justify-end gap-2 mt-12 md:mt-20 text-xs hover:text-[#4ADE80] transition-colors cursor-pointer">

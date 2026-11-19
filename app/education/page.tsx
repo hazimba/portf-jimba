@@ -16,11 +16,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Education | Hazim Bakar",
+  title: "Education & Software Engineering Training",
   description:
-    "Explore the educational background of Hazim Bakar, highlighting his academic achievements and foundational knowledge in software engineering and computer science.",
+    "Explore Hazim Bakar's educational background, including engineering studies at UiTM and practical software engineering training covering programming and web development.",
   alternates: {
-    canonical: "https://hazim-bakar.com/education",
+    canonical: "/education",
   },
 };
 
@@ -32,7 +32,7 @@ const EducationPage = async () => {
       duration: "2022 - 2023",
       logo: "/sigma-school.webp",
       description:
-        "Programming school focused on practical software engineering skills, covering fundamental of programming, web development, and mobile app development.",
+        "Completed practical software engineering training covering programming fundamentals, web development, and mobile application development, with an emphasis on hands-on projects and collaborative learning.",
       highlights: [
         "Self Paced Learning: Completed the curriculum at an accelerated pace, demonstrating strong self-motivation and discipline.",
         "Collaborative Learning: Actively participated in peer code reviews and group projects, fostering a collaborative learning environment.",
@@ -44,7 +44,7 @@ const EducationPage = async () => {
       duration: "2017 - 2020",
       logo: "/uitm-logo.png",
       description:
-        "Bachelor's degree in Engineering, providing a strong foundation in engineering principles and problem-solving skills.",
+        "Completed a Bachelor's degree in Engineering at Universiti Teknologi MARA (UiTM), developing a foundation in analytical thinking, technical problem-solving, and engineering principles.",
     },
   ];
 
@@ -66,17 +66,18 @@ const EducationPage = async () => {
               <Card key={idx} className="overflow-hidden">
                 <CardHeader>
                   <div className="flex items-center space-x-4 mb-2">
-                    <div className="relative !w-12 h-12 rounded-full overflow-hidden">
+                    <div className="relative w-12 h-12 shrink-0 rounded-full overflow-hidden bg-white p-1">
                       <Image
                         src={edu.logo}
-                        alt={edu.institution}
+                        alt={`${edu.institution} logo`}
                         fill
-                        className="object-cover bg-white"
+                        sizes="48px"
+                        className="object-contain p-1"
                       />
                     </div>
                     <div className="">
-                      <CardTitle className="text-lg md:text-2xl font-bold tracking-tight">
-                        {edu.degree}
+                      <CardTitle>
+                        <h2 className="text-xl font-semibold">{edu.degree}</h2>
                       </CardTitle>
                       <CardDescription className="text-sm md:text-base text-primary font-medium">
                         {edu.institution}
@@ -89,7 +90,7 @@ const EducationPage = async () => {
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-muted-foreground mb-4 text-medium md:text-lg font-mono font-medium">
+                  <p className="text-muted-foreground mb-4 text-sm md:text-base leading-relaxed">
                     {edu.description}
                   </p>
 
@@ -100,7 +101,7 @@ const EducationPage = async () => {
                         className="border-none"
                       >
                         <AccordionTrigger className="py-2 hover:no-underline">
-                          View Key Courses & Projects
+                          View Learning Highlights
                         </AccordionTrigger>
                         <AccordionContent>
                           <ul className="list-disc text-xs md:text-sm pl-5 space-y-2 text-muted-foreground/80">
