@@ -23,7 +23,7 @@ export default function FAQPage() {
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   My website development services start from RM2,000 for simpler
-                  business websites. Final pricing depends on the project's
+                  business websites. Final pricing depends on the project&apos;s
                   complexity, design requirements, number of pages, custom
                   features, integrations, and overall scope. Contact me for a
                   quotation tailored to your business needs.
@@ -35,10 +35,10 @@ export default function FAQPage() {
                   Which areas do you provide web development services in?
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  I'm a freelance web developer based in Shah Alam, Selangor,
-                  serving businesses across Selangor, Kuala Lumpur, Negeri
-                  Sembilan, Perak, and nearby areas. I also work remotely with
-                  clients throughout Malaysia.
+                  I&apos;m a freelance web developer based in Shah Alam,
+                  Selangor, serving businesses across Selangor, Kuala Lumpur,
+                  Negeri Sembilan, Perak, and nearby areas. I also work remotely
+                  with clients throughout Malaysia.
                 </p>
               </article>
 
@@ -48,7 +48,7 @@ export default function FAQPage() {
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
                   I specialize in custom website development from scratch,
-                  tailored to each client's requirements. With professional
+                  tailored to each client&apos;s requirements. With professional
                   experience as a full-stack software developer, I understand
                   the underlying code, application architecture, database
                   design, and deployment process. My work goes beyond assembling
