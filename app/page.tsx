@@ -163,14 +163,43 @@ const Home = async () => {
               <p className="text-[10px] md:text-xs uppercase text-muted-foreground tracking-wider mb-3">
                 A recent win
               </p>
+
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Led{" "}
+                Independently led the end-to-end development of{" "}
+                <a
+                  href="https://muqrie.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground font-medium hover:underline"
+                >
+                  Muqrie Travel Agency
+                </a>
+                , a modern travel platform featuring a custom{" "}
                 <span className="text-foreground font-medium">
-                  a travel agency content management system project
+                  content management system (CMS)
                 </span>{" "}
-                end-to-end — planning, design, development, QA, and launch — all
-                on my own. Delivered a site that the client was genuinely happy
-                with.
+                for managing tour packages and itineraries. I also designed and
+                developed{" "}
+                <a
+                  href="https://kembumijati.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground font-medium hover:underline"
+                >
+                  Kem Bumi Jati
+                </a>
+                , a training centre website in Shah Alam, Selangor, focusing on{" "}
+                <span className="text-foreground font-medium">
+                  search engine optimization (SEO), responsive web design,
+                  website performance, and Google Analytics integration
+                </span>
+                . Both projects were managed independently, from planning and
+                UI/UX design to full-stack development, testing, and deployment
+                using{" "}
+                <span className="text-foreground font-medium">
+                  Next.js, React, TypeScript, Supabase, and Cloudflare
+                </span>
+                .
               </p>
             </div>
           </div>

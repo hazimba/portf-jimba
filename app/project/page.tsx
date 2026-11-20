@@ -97,7 +97,7 @@ const ProjectsPage = async () => {
           <section className="text-center mb-12 md:mb-20">
             <div className="relative inline-flex items-center justify-center mb-6">
               <h1 className="relative z-10 text-4xl md:text-5xl font-bold md:w-full text-center">
-                Web Development Projects
+                <span className="text-[#4ADE80]">Web Development</span> Projects
               </h1>
               <AnimationBg />
             </div>

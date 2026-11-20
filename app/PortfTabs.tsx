@@ -25,6 +25,14 @@ export function PortfolioTabs() {
             <Link href="/project">Projects</Link>
           </TabsTrigger>
 
+          <TabsTrigger value="/services">
+            <Link href="/services">Services</Link>
+          </TabsTrigger>
+
+          <TabsTrigger value="/faq">
+            <Link href="/faq">FAQ</Link>
+          </TabsTrigger>
+
           <div className="hidden md:flex">
             <TabsTrigger value="/experience">
               <Link href="/experience">Experience</Link>
@@ -38,10 +46,16 @@ export function PortfolioTabs() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <TabsTrigger value="more" className="flex items-center gap-1">
-                  More <ChevronDown className="h-4 w-4" />
+                  <ChevronDown className="h-4 w-4" />
                 </TabsTrigger>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="space-y-2">
+                <DropdownMenuItem asChild>
+                  <Link href="/services">Services</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/faq">FAQ</Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/experience">Experience</Link>
                 </DropdownMenuItem>
